@@ -57,7 +57,7 @@ if not st.session_state.accepted:
         
         with sub_col_no:
             # Baited labels to encourage the first click
-            no_labels = ["No"]
+            no_labels = ["No (DO NOT CLICK ⛔️)"]
             current_label = no_labels[min(st.session_state.no_count, len(no_labels)-1)]
             
             if st.session_state.no_count < 5:
@@ -72,7 +72,7 @@ if not st.session_state.accepted:
             "This 'No' is an unhedged risk I can't accept.",
             "I've already priced in your 'Yes'. Don't cause a crash.",
             "The ROI on my affection is 10,000%. Do the math.",
-            "Wait, if you click No again, I'm calling the SEC.",
+            "If you click No again, I'm calling the SEC frfr.",
             "SAYANG PLEASEEEE? 🥺😩",
         ]
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
