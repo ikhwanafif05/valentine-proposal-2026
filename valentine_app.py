@@ -53,4 +53,4 @@ else:
     st.success("## TRANSACTION CONFIRMED! ✅")
     st.write("You have successfully merged with the Ikhwan Portfolio. See you on Feb 14th.")
     # Fixed GIF: Direct link to the Minion Heart 
-    st.image("https://media.tenor.com/7vj7K6T7IpwAAAAM/minions-love.gif")
+    st.image("https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fesportssuriname.com%2FHappy-Valentines-Day-Minion-Quotes-Images%2F443537&ved=0CBUQjRxqFwoTCIjErLGg05IDFQAAAAAdAAAAABAI&opi=89978449")
