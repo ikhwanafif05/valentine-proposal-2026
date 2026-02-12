@@ -78,19 +78,23 @@ if not st.session_state.accepted:
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
 
 else:
-    # Success State: Fully Executed MVSA [cite: 2025-11-25]
+    # Success State: The "Closing Bell"
     st.balloons()
     st.success("## MVSA STATUS: FULLY EXECUTED & NOTARISED! ✅")
+    
     st.markdown("""
         <div style='text-align: center;'>
             <h2>Acquisition Complete.</h2>
-            <p>You have been designated as the <b>Core Strategic Asset</b> of my life.</p>
+            <p style='font-size: 1.5em; font-weight: bold;'>You will now be my Valentine FOR LIFE! ❤️</p>
             <p style='font-size: 0.9em; color: #888;'>
-                <i>Note: Approval of this contract removes the need for future annual renegotiations.</i>
+                <i>Note: Approval of this contract removes the need for future annual renegotiations. [cite: 2025-11-25]</i>
             </p>
             <hr>
-            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru)</p>
-            <p>See you on Feb 14th baby girl! 😘❤️</p>
+            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru) [cite: 2025-11-25]</p>
+            <p><b>Dividend Policy:</b> Unlimited affection and nuggets distributed daily. [cite: 2025-12-10]</p>
+            <p>Reservation for Feb 14th is now legally binding. See you then, Sayang! 😘</p>
         </div>
     """, unsafe_allow_html=True)
+    
+    # Stable Minion Asset
     st.image("https://media.tenor.com/kutFNFXxSIsAAAAM/minion-minion-loves.gif", use_container_width=True)
