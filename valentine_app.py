@@ -90,7 +90,7 @@ else:
             </p>
             <hr>
             <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru)</p>
-            <p>See you on Feb 14th! 😘❤️</p>
+            <p>See you on Feb 14th baby girl! 😘❤️</p>
         </div>
     """, unsafe_allow_html=True)
     st.image("https://media.tenor.com/kutFNFXxSIsAAAAM/minion-minion-loves.gif", use_container_width=True)
