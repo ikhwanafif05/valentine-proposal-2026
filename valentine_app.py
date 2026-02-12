@@ -11,8 +11,8 @@ if 'accepted' not in st.session_state:
 # 2. Logic & Layout
 if not st.session_state.accepted:
     # Centering the header
-    st.markdown("<h1 style='text-align: center;'>Final Term Sheet: Strategic Partnership</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center;'>Will you be my Valentine?</h3>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Master Valentine Services Agreement (MVSA)</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>Will you be my Valentine forever and ever? 😁</h3>", unsafe_allow_html=True)
 
     # Dynamic Sizing based on "No" count
     # 'YES' gets bigger, 'No' stays small then disappears
@@ -70,13 +70,29 @@ if not st.session_state.accepted:
             "I've already priced in your 'Yes'. Don't cause a crash.",
             "The ROI on my affection is 10,000%. Do the math.",
             "You're creating a liquidity trap. Have mercy.",
-            "PLEASEEEE? 🥺😩",
+            "Please Sayang? 🥺"
+            "SAYANG PLEASEEEE? 🥺😩",
         ]
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
 
 else:
-    # Success State
+    # Success State: The "Closing Bell"
     st.balloons()
-    st.success("## TRANSACTION CONFIRMED! ✅")
-    st.markdown("<h4 style='text-align: center;'>You have merged with Ikhwan. See you on Feb 14th! 😘❤️</h4>", unsafe_allow_html=True)
+    st.success("## MVSA STATUS: FULLY EXECUTED & NOTARISED! ✅")
+    
+    st.markdown("""
+        <div style='text-align: center;'>
+            <h2>Acquisition Complete.</h2>
+            <p>You have been designated as the <b>Core Strategic Asset</b> of my life.</p>
+            <p style='font-size: 0.9em; color: #666;'>
+                <i>Note: Approval of this contract removes the need for future annual renegotiations.</i>
+            </p>
+            <hr>
+            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - ∞)</p>
+            <p><b>Next Steps:</b> Dividend payments (endless affection) are now active.</p>
+            <p>Reservation for Feb 14th is now legally binding. See you then! 😘❤️</p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Stable Minion Asset
     st.image("https://media.tenor.com/kutFNFXxSIsAAAAM/minion-minion-loves.gif", use_container_width=True)
