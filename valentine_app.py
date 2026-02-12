@@ -85,8 +85,8 @@ else:
         <div style='text-align: center;'>
             <h2>Acquisition Complete.</h2>
             <p style='font-size: 1.5em; font-weight: bold;'>You will now be my Valentine FOR LIFE! ❤️</p>
-            <p style='font-size: 0.9em; color: #888;'>
-                <i>Note: Approval of this contract removes the need for future annual renegotiations. [cite: 2025-11-25]</i>
+            <p style='font-size: 0.9em'>
+                <i>Note: Approval of this contract removes the need for future annual renegotiations.</i>
             </p>
             <hr>
             <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru).</p>
