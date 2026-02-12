@@ -90,8 +90,8 @@ else:
                 <i>Note: Approval of this contract removes the need for future annual renegotiations. [cite: 2025-11-25]</i>
             </p>
             <hr>
-            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru) [cite: 2025-11-25]</p>
-            <p><b>Dividend Policy:</b> Unlimited affection and nuggets distributed daily. [cite: 2025-12-10]</p>
+            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru).</p>
+            <p><b>Dividend Policy:</b> Unlimited affection and nuggets distributed daily.</p>
             <p>Reservation for Feb 14th is now legally binding. See you then, Sayang! 😘</p>
         </div>
     """, unsafe_allow_html=True)
