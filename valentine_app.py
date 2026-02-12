@@ -11,37 +11,41 @@ if 'accepted' not in st.session_state:
 # 2. Logic & Layout
 if not st.session_state.accepted:
     st.markdown("<h1 style='text-align: center;'>Master Valentine Services Agreement (MVSA)</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center;'>Jaf Iessa Will you be my Valentine FOREVER?</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>Jaf Iessa, will you be my Valentine FOREVER?</h3>", unsafe_allow_html=True)
 
     # Growth Logic
     yes_font = 16 + (st.session_state.no_count * 12)
-    yes_padding = 10 + (st.session_state.no_count * 20)
+    yes_padding = 15 + (st.session_state.no_count * 20) # Equal start padding
     
-    # Custom CSS for the "Hostile Takeover"
+    # Custom CSS for parity and then dominance
     st.markdown(f"""
         <style>
-        .stColumn {{ display: flex; align-items: center; justify-content: center; }}
-        /* YES Button: Becomes the Market Leader */
+        .stButton > button {{
+            height: auto !important;
+            white-space: nowrap !important;
+        }}
+        /* YES Button: Market Cap Expansion */
         div.stButton > button[kind="primary"] {{
             font-size: {yes_font}px !important;
             padding: {yes_padding}px 0px !important;
             width: 100% !important;
-            transition: all 0.3s ease;
         }}
-        /* NO Button: Headed for Delisting */
+        /* NO Button: The Fading Asset */
         div.stButton > button[kind="secondary"] {{
+            padding: 15px 0px !important; /* Matches YES start padding */
+            font-size: 16px !important;
+            width: 100% !important;
             opacity: {max(0.1, 1 - (st.session_state.no_count * 0.25))};
-            font-size: 14px !important;
         }}
         </style>
     """, unsafe_allow_html=True)
 
-    # 12-Column Grid Squeeze
-    # After 5 clicks, yes_ratio = 11, no_ratio = 1. Effectively 100% ownership.
-    yes_ratio = min(11, 2 + (st.session_state.no_count * 2))
+    # 12-Column Grid [cite: 2025-12-10]
+    # Starts 6:6 (Balanced), ends 11:1 (Monopoly)
+    yes_ratio = min(11, 6 + (st.session_state.no_count * 1))
     no_ratio = 12 - yes_ratio
     
-    col_main = st.columns([1, 10, 1])[1] # Center the action
+    col_main = st.columns([1, 10, 1])[1] 
 
     with col_main:
         sub_col_yes, sub_col_no = st.columns([yes_ratio, no_ratio])
@@ -52,16 +56,17 @@ if not st.session_state.accepted:
                 st.rerun()
         
         with sub_col_no:
-            # The "Hard-Stop"
-            # Once she hits 5 'No's, the button is delisted from the UI.
+            # Baited labels to encourage the first click
+            no_labels = ["No", "Low ROI Option", "Risk Assessment", "Manual Review", "Boring Terms"]
+            current_label = no_labels[min(st.session_state.no_count, len(no_labels)-1)]
+            
             if st.session_state.no_count < 5:
-                if st.button("No", type="secondary", use_container_width=True):
+                if st.button(current_label, type="secondary", use_container_width=True):
                     st.session_state.no_count += 1
                     st.rerun()
             else:
-                st.empty() # Total Liquidity Squeeze
+                st.empty() 
 
-    # The Pleading Messages [cite: 2025-11-25]
     if st.session_state.no_count > 0:
         msgs = [
             "This 'No' is an unhedged risk I can't accept.",
@@ -73,18 +78,18 @@ if not st.session_state.accepted:
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
 
 else:
-    # Success State: MVSA Execution
+    # Success State: Fully Executed MVSA [cite: 2025-11-25]
     st.balloons()
     st.success("## MVSA STATUS: FULLY EXECUTED & NOTARISED! ✅")
     st.markdown("""
         <div style='text-align: center;'>
             <h2>Acquisition Complete.</h2>
-            <p>You have been designated as the <b>Core Strategic Asset</b> of my life. [cite: 2025-11-25]</p>
+            <p>You have been designated as the <b>Core Strategic Asset</b> of my life.</p>
             <p style='font-size: 0.9em; color: #888;'>
-                <i>Note: Approval of this contract removes the need for future annual renegotiations. [cite: 2025-11-25]</i>
+                <i>Note: Approval of this contract removes the need for future annual renegotiations.</i>
             </p>
             <hr>
-            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru) [cite: 2025-11-25]</p>
+            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru)</p>
             <p>See you on Feb 14th! 😘❤️</p>
         </div>
     """, unsafe_allow_html=True)
