@@ -70,7 +70,7 @@ if not st.session_state.accepted:
             "I've already priced in your 'Yes'. Don't cause a crash.",
             "The ROI on my affection is 10,000%. Do the math.",
             "You're creating a liquidity trap. Have mercy.",
-            "Please Sayang? 🥺"
+            "Please Sayang? 🥺",
             "SAYANG PLEASEEEE? 🥺😩",
         ]
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
