@@ -51,6 +51,6 @@ else:
     # Success State: The "Closing Bell"
     st.balloons()
     st.success("## TRANSACTION CONFIRMED! ✅")
-    st.write("You have successfully merged with the Ikhwan Portfolio. See you on Feb 14th.")
+    st.write("You have successfully merged with Ikhwan. See you on Feb 14th! 😘❤️")
     # Fixed GIF: Direct link to the Minion Heart 
-    st.image("https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fesportssuriname.com%2FHappy-Valentines-Day-Minion-Quotes-Images%2F443537&ved=0CBUQjRxqFwoTCIjErLGg05IDFQAAAAAdAAAAABAI&opi=89978449")
+    st.image("https://media.tenor.com/kutFNFXxSIsAAAAM/minion-minion-loves.gif")
