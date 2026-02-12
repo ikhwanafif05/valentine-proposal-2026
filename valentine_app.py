@@ -57,7 +57,7 @@ if not st.session_state.accepted:
         
         with sub_col_no:
             # Baited labels to encourage the first click
-            no_labels = ["No", "Low ROI Option", "Risk Assessment", "Manual Review", "Boring Terms"]
+            no_labels = ["No"]
             current_label = no_labels[min(st.session_state.no_count, len(no_labels)-1)]
             
             if st.session_state.no_count < 5:
