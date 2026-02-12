@@ -90,7 +90,7 @@ else:
             </p>
             <hr>
             <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever Bru).</p>
-            <p><b>Dividend Policy:</b> Unlimited affection and nuggets distributed daily.</p>
+            <p><b>Dividend Policy:</b> Unlimited affection DAILY.</p>
             <p>Reservation for Feb 14th is now legally binding. See you then, Sayang! 😘</p>
         </div>
     """, unsafe_allow_html=True)
