@@ -26,7 +26,6 @@ if not st.session_state.accepted:
         if st.button("YES", type="primary", use_container_width=True):
             st.session_state.accepted = True
             st.rerun()
-
     with col2:
         if st.button("No", type="secondary", use_container_width=True):
             st.session_state.no_count += 1
@@ -35,14 +34,13 @@ if not st.session_state.accepted:
     # The Pleading Messages: "Leveraged Negotiation" Mode
     if st.session_state.no_count > 0:
         pleading_messages = [
-            "Please? 🥺",
             "This 'No' is an unhedged risk I can't accept.",
             "I've already priced in your 'Yes'. Don't cause a market crash.",
             "The ROI on my affection is literally 10,000%. Do the math.",
             "You're creating a liquidity trap. Have mercy.",
             "Wait, if you click No again, I'm calling the SEC.",
-            "Please? I'll treat you like a blue-chip stock.",
-            "Fine. I'll buy you nuggets. Now click Yes.",
+            "Please? 🥺",
+            "PLEASEEEE? 🥺😩",
         ]
         msg_index = min(st.session_state.no_count - 1, len(pleading_messages) - 1)
         st.error(pleading_messages[msg_index])
