@@ -30,13 +30,6 @@ if not st.session_state.accepted:
             padding: {yes_padding}px 0px !important;
             width: 100% !important;
         }}
-        /* NO Button: The Fading Asset */
-        div.stButton > button[kind="secondary"] {{
-            padding: 15px 0px !important; /* Matches YES start padding */
-            font-size: 16px !important;
-            width: 100% !important;
-            opacity: {max(0.1, 1 - (st.session_state.no_count * 0.25))};
-        }}
         </style>
     """, unsafe_allow_html=True)
 
