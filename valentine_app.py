@@ -64,5 +64,3 @@ else:
     st.success("## TRANSACTION CONFIRMED! ✅")
     st.write("You have successfully merged with the Ikhwan Portfolio. See you on Feb 14th.")
     st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZndqZndqZndqZndqZndqZndqZndqZndqZndqZndqZndqJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/kyLYXonQpw60WODdVz/giphy.gif")
-
-!npx localtunnel --port 8501
