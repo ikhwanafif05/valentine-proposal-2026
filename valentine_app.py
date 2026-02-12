@@ -1,35 +1,48 @@
 import streamlit as st
 
-# Set page config for a professional terminal look
 st.set_page_config(page_title="Strategic Proposal FY2026", page_icon="📈")
 
-# Initialize session state for the "No" counter
+# 1. State Management
 if 'no_count' not in st.session_state:
     st.session_state.no_count = 0
 if 'accepted' not in st.session_state:
     st.session_state.accepted = False
 
-# Layout
-st.title("Final Term Sheet: Strategic Partnership")
-st.subheader("To: My Favourite Asset")
-
+# 2. The Logic
 if not st.session_state.accepted:
+    st.title("Final Term Sheet: Strategic Partnership")
     st.write("### Will you be my Valentine?")
-    
-    # Growth logic: The "No-Trap" mechanism
-    yes_size = 1.0 + (st.session_state.no_count * 0.6) # Aggressive expansion
-    no_size = max(0.1, 1.0 - (st.session_state.no_count * 0.2)) # Liquidity squeeze
-    
-    col1, col2 = st.columns([yes_size, no_size])
+
+    # Squeeze Logic: "Yes" grows, "No" disappears
+    # We use a 12-column grid. "Yes" takes more columns as count increases.
+    yes_cols = min(11, 2 + (st.session_state.no_count * 2)) 
+    no_cols = 12 - yes_cols
+
+    col1, col2 = st.columns([yes_cols, no_cols])
 
     with col1:
+        # Custom CSS to make the button actually bigger vertically too
+        yes_padding = 10 + (st.session_state.no_count * 20)
+        st.markdown(f"""
+            <style>
+            div.stButton > button:first-child {{
+                padding: {yes_padding}px 0px;
+                font-size: {16 + st.session_state.no_count * 5}px !important;
+            }}
+            </style>""", unsafe_allow_html=True)
+            
         if st.button("YES", type="primary", use_container_width=True):
             st.session_state.accepted = True
             st.rerun()
+
     with col2:
-        if st.button("No", type="secondary", use_container_width=True):
-            st.session_state.no_count += 1
-            st.rerun()
+        # If no_cols is very small, we just stop showing the button
+        if no_cols > 1:
+            if st.button("No", type="secondary", use_container_width=True):
+                st.session_state.no_count += 1
+                st.rerun()
+        else:
+            st.write("") # No button has been "delisted"
 
     # The Pleading Messages: "Leveraged Negotiation" Mode
     if st.session_state.no_count > 0:
