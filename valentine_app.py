@@ -64,11 +64,11 @@ if not st.session_state.accepted:
     # The Pleading Messages [cite: 2025-11-25]
     if st.session_state.no_count > 0:
         msgs = [
-            "This 'No' is an unhedged risk I can't accept. [cite: 2025-11-25]",
-            "I've already priced in your 'Yes'. Don't cause a crash. [cite: 2025-11-25]",
-            "The ROI on my affection is 10,000%. Do the math. [cite: 2025-12-10]",
-            "Wait, if you click No again, I'm calling the SEC. [cite: 2025-12-10]",
-            "PLEASEEEE? 🥺😩",
+            "This 'No' is an unhedged risk I can't accept.",
+            "I've already priced in your 'Yes'. Don't cause a crash.",
+            "The ROI on my affection is 10,000%. Do the math.",
+            "Wait, if you click No again, I'm calling the SEC.",
+            "SAYANG PLEASEEEE? 🥺😩",
         ]
         st.error(msgs[min(st.session_state.no_count-1, len(msgs)-1)])
 
