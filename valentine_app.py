@@ -88,7 +88,7 @@ else:
                 <i>Note: Approval of this contract removes the need for future annual renegotiations.</i>
             </p>
             <hr>
-            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - ∞)</p>
+            <p><b>Contract Term:</b> Perpetual & Irrevocable (FY2026 - Forever bruh)</p>
             <p><b>Next Steps:</b> Dividend payments (endless affection) are now active.</p>
             <p>Reservation for Feb 14th is now legally binding. See you then! 😘❤️</p>
         </div>
